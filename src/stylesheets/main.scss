@@ -13,7 +13,25 @@
 - Utilities
 - Clearing
 - Media Queries
+
+
+Havent imported styles yet becasue
+when I do bugs which I cant seem to
+figure out show up in my code
+
+For example @import url(alerts.scss);
+would retune MANY  errors and I tried to fix it.
+
+USE 
+
+One of the errors has to do with my Sass Variables
+COuld it be something wrong with the Vite Configuration
 */
+$list: alert, tables, buttons, forms, list, cards;
+
+@each $item in $list {
+  @import url(_#{$item}.scss);
+}
 
 html {
   font-size: 1em;
@@ -974,6 +992,9 @@ pre > code {
     white-space: nowrap;
   }
 }
+
+
+//Alert Styles
 
 .alert {
   width: 100%;
